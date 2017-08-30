@@ -1,0 +1,363 @@
+$extraLargeScreen: 1200px;
+$largeScreen: 992px;
+$medumScreen: 768px;
+$smallScreen: 576px;
+
+.container-styles{
+	margin: 0 auto;
+	padding: auto 15px;
+	width: 100%;
+}
+	
+.container {
+	@extend .container-styles;
+	@media (max-width: $largeScreen) {
+		padding: 0;
+	}	
+	@media (min-width: $extraLargeScreen) {
+		max-width: 1140px;
+	}
+  }
+
+.container-fluid {
+	@extend .container-styles;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto -15px;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl
+{
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  max-width: 100%;
+}
+
+$col_1_Width: 8.333333%;
+$col_2_Width: 16.666667%;
+$col_3_Width: 25%;
+$col_4_Width: 33.333333%;
+$col_5_Width: 41.666667%;
+$col_6_Width: 50%;
+$col_7_Width: 58.333333%;
+$col_8_Width: 66.666667%;
+$col_9_Width: 75%;
+$col_10_Width: 83.333333%;
+$col_11_Width: 91.666667%;
+$col_12_Width: 100%;
+
+@mixin flex($basis, $grow:0, $shrink:0) {
+  -ms-flex: $grow $shrink $basis;
+      flex: $grow $shrink $basis;
+}
+
+.col-1 {
+	@include flex($basis: $col_1_Width);
+	max-width: $col_1_Width;
+}
+
+.col-2 {
+	@include flex($basis: $col_2_Width);
+	max-width: $col_2_Width;
+}
+
+.col-3 {
+	@include flex($basis: $col_3_Width);
+	max-width: $col_3_Width;
+}
+
+.col-4 {
+	@include flex($basis: $col_4_Width);
+	max-width: $col_4_Width;
+}
+
+.col-5 {
+	@include flex($basis: $col_5_Width);
+	max-width: $col_5_Width;
+}
+
+.col-6 {
+	@include flex($basis: $col_6_Width);
+	max-width: $col_6_Width;
+}
+
+.col-7 {
+	@include flex($basis: $col_7_Width);
+	max-width: $col_7_Width;
+}
+
+.col-8 {
+	@include flex($basis: $col_8_Width);
+	max-width: $col_8_Width;
+}
+
+.col-9 {
+	@include flex($basis: $col_9_Width);
+	max-width: $col_9_Width;
+}
+
+.col-10 {
+	@include flex($basis: $col_10_Width);
+	max-width: $col_10_Width;
+}
+
+.col-11 {
+	@include flex($basis: $col_11_Width);
+	max-width: $col_11_Width;
+}
+
+.col-12 {
+	@include flex($basis: $col_12_Width);
+	max-width: $col_12_Width;
+}
+
+@media (min-width: $smallScreen) {
+  .col-sm {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-sm-1 {
+	@include flex($basis: $col_1_Width);
+	max-width: $col_1_Width;
+  }
+  .col-sm-2 {
+	@include flex($basis: $col_2_Width);
+	max-width: $col_2_Width;
+  }
+  .col-sm-3 {
+	@include flex($basis: $col_3_Width);
+	max-width: $col_3_Width;
+  }
+  .col-sm-4 {
+	@include flex($basis: $col_4_Width);
+	max-width: $col_4_Width;
+  }
+  .col-sm-5 {
+	@include flex($basis: $col_5_Width);
+	max-width: $col_5_Width;
+  }
+  .col-sm-6 {
+	@include flex($basis: $col_6_Width);
+	max-width: $col_6_Width;
+  }
+  .col-sm-7 {
+	@include flex($basis: $col_7_Width);
+	max-width: $col_7_Width;
+  }
+  .col-sm-8 {
+	@include flex($basis: $col_8_Width);
+	max-width: $col_8_Width;
+  }
+  .col-sm-9 {
+	@include flex($basis: $col_9_Width);
+	max-width: $col_9_Width;
+  }
+  .col-sm-10 {
+	@include flex($basis: $col_10_Width);
+	max-width: $col_10_Width;	
+  }
+  .col-sm-11 {
+	@include flex($basis: $col_11_Width);
+	max-width: $col_11_Width;
+  }
+  .col-sm-12 {
+	@include flex($basis: $col_12_Width);
+	max-width: $col_12_Width;
+  }
+}
+
+@media (min-width: $medumScreen) {
+  .col-md {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-md-1 {
+	@include flex($basis: $col_1_Width);
+	max-width: $col_1_Width;
+  }
+  .col-md-2 {
+    @include flex($basis: $col_2_Width);
+	max-width: $col_2_Width;
+  }
+  .col-md-3 {
+    @include flex($basis: $col_3_Width);
+	max-width: $col_3_Width;
+  }
+  .col-md-4 {
+    @include flex($basis: $col_4_Width);
+	max-width: $col_4_Width;
+  }
+  .col-md-5 {
+    @include flex($basis: $col_5_Width);
+	max-width: $col_5_Width;
+  }
+  .col-md-6 {
+    @include flex($basis: $col_6_Width);
+	max-width: $col_6_Width;
+  }
+  .col-md-7 {
+    @include flex($basis: $col_7_Width);
+	max-width: $col_7_Width;
+  }
+  .col-md-8 {
+   @include flex($basis: $col_8_Width);
+	max-width: $col_8_Width;
+  }
+  .col-md-9 {
+    @include flex($basis: $col_9_Width);
+	max-width: $col_9_Width;
+  }
+  .col-md-10 {
+    @include flex($basis: $col_10_Width);
+	max-width: $col_10_Width;
+  }
+  .col-md-11 {
+    @include flex($basis: $col_11_Width);
+	max-width: $col_11_Width;
+  }
+  .col-md-12 {
+    @include flex($basis: $col_12_Width);
+	max-width: $col_12_Width;
+  }
+}
+
+@media (min-width: $largeScreen) {
+  .col-lg {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-lg-1 {
+    @include flex($basis: $col_1_Width);
+	max-width: $col_1_Width;
+  }
+  .col-lg-2 {
+    @include flex($basis: $col_2_Width);
+	max-width: $col_2_Width;
+  }
+  .col-lg-3 {
+    @include flex($basis: $col_3_Width);
+	max-width: $col_3_Width;
+  }
+  .col-lg-4 {
+    @include flex($basis: $col_4_Width);
+	max-width: $col_4_Width;
+  }
+  .col-lg-5 {
+    @include flex($basis: $col_5_Width);
+	max-width: $col_5_Width;
+  }
+  .col-lg-6 {
+    @include flex($basis: $col_6_Width);
+	max-width: $col_6_Width;
+  }
+  .col-lg-7 {
+    @include flex($basis: $col_7_Width);
+	max-width: $col_7_Width;
+  }
+  .col-lg-8 {
+    @include flex($basis: $col_8_Width);
+	max-width: $col_8_Width;
+  }
+  .col-lg-9 {
+    @include flex($basis: $col_9_Width);
+	max-width: $col_9_Width;
+  }
+  .col-lg-10 {
+    @include flex($basis: $col_10_Width);
+	max-width: $col_10_Width;
+  }
+  .col-lg-11 {
+    @include flex($basis: $col_11_Width);
+	max-width: $col_11_Width;
+  }
+  .col-lg-12 {
+   @include flex($basis: $col_12_Width);
+	max-width: $col_12_Width;
+  }
+}
+
+@media (min-width: $extraLargeScreen) {
+  .col-xl {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-xl-1 {
+    @include flex($basis: $col_1_Width);
+	max-width: $col_1_Width;
+  }
+  .col-xl-2 {
+	@include flex($basis: $col_2_Width);
+	max-width: $col_2_Width;
+  }
+  .col-xl-3 {
+	@include flex($basis: $col_3_Width);
+	max-width: $col_3_Width;
+  }
+  .col-xl-4 {
+	@include flex($basis: $col_4_Width);
+	max-width: $col_4_Width;
+  }
+  .col-xl-5 {
+	@include flex($basis: $col_5_Width);
+	max-width: $col_5_Width;
+  }
+  .col-xl-6 {
+	@include flex($basis: $col_6_Width);
+	max-width: $col_6_Width;
+  }
+  .col-xl-7 {
+	@include flex($basis: $col_7_Width);
+	max-width: $col_7_Width;
+  }
+  .col-xl-8 {
+	@include flex($basis: $col_8_Width);
+	max-width: $col_8_Width;
+  }
+  .col-xl-9 {
+	@include flex($basis: $col_9_Width);
+	max-width: $col_9_Width;
+  }
+  .col-xl-10 {
+	@include flex($basis: $col_10_Width);
+	max-width: $col_10_Width;
+  }
+  .col-xl-11 {
+	@include flex($basis: $col_11_Width);
+	max-width: $col_11_Width;
+  }
+  .col-xl-12 {
+	@include flex($basis: $col_12_Width);
+	max-width: $col_12_Width;
+  }
+}
